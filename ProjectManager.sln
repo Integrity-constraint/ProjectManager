@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManager", "ProjectManager.csproj", "{E1F12D1C-51CE-4853-A4B7-B8B1DAA5AFF0}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PMsetup", "PMsetup\PMsetup.vdproj", "{F11B94DA-8AC7-4A23-8E76-4D96656554BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1F12D1C-51CE-4853-A4B7-B8B1DAA5AFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F12D1C-51CE-4853-A4B7-B8B1DAA5AFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F12D1C-51CE-4853-A4B7-B8B1DAA5AFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F12D1C-51CE-4853-A4B7-B8B1DAA5AFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F11B94DA-8AC7-4A23-8E76-4D96656554BE}.Debug|Any CPU.ActiveCfg = Debug
+		{F11B94DA-8AC7-4A23-8E76-4D96656554BE}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BE6C3EA-DB8E-405C-A893-BB1AC5C12D7B}
+	EndGlobalSection
+EndGlobal
