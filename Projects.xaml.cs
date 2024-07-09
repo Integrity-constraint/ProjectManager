@@ -12,6 +12,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
@@ -42,28 +43,51 @@ namespace ProjectManager
 
         async void CollectFiles()
         {
-            string rootFolder = path.Text;
-            if (string.IsNullOrEmpty(rootFolder) || !Directory.Exists(rootFolder))
+            string rootFolder = "";
+
+            var folderDialog = new OpenFolderDialog
             {
-                MessageBox.Show("Неверный путь");
-                return;
+                // Set options here
+            };
+
+            if (folderDialog.ShowDialog() == true)
+            {
+                var folderName = folderDialog.FolderName;
+                rootFolder = folderName;
+                path.Text = rootFolder;
             }
 
-            projectList.Clear();
-         
+            MessageBoxResult result = MessageBox.Show($"Начать сканирование на наличие проектов ?", "Подтвердите операцию", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-            cancellationTokenSource = new CancellationTokenSource();
-
-            try
+            if (result == MessageBoxResult.Yes)
             {
-                await CollectFilesAsync(rootFolder, cancellationTokenSource.Token);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
-            }
+                if (string.IsNullOrEmpty(rootFolder) || !Directory.Exists(rootFolder))
+                {
+                    MessageBox.Show("Неверный путь");
+                    return;
+                }
 
-            Dispatcher.Invoke(() => ProjectList.ItemsSource = projectList);
+                projectList.Clear();
+
+
+                cancellationTokenSource = new CancellationTokenSource();
+
+                try
+                {
+                    await CollectFilesAsync(rootFolder, cancellationTokenSource.Token);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+
+                Dispatcher.Invoke(() => ProjectList.ItemsSource = projectList);
+            }
+            else 
+            {
+                MessageBox.Show("Операция отменена");
+            }
+          
         }
 
         async Task CollectFilesAsync(string directory, CancellationToken cancellationToken)

@@ -16,8 +16,11 @@
     <None Remove="github.png" />
     <None Remove="ico.png" />
     <None Remove="inkognito.png" />
+    <None Remove="pause.png" />
     <None Remove="Projects.xaml.cs~RF758832.TMP" />
     <None Remove="pvh2sogy.zdo~" />
+    <None Remove="search.png" />
+    <None Remove="stop.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +35,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="github.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pause.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="stop.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="ico.png">
