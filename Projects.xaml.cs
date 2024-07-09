@@ -32,12 +32,12 @@ namespace ProjectManager
         {
             InitializeComponent();
 
-           
+
         }
-        
-     private void collectPrj(object sender, RoutedEventArgs e)
+
+        private void collectPrj(object sender, RoutedEventArgs e)
         {
-           CollectFiles();
+            CollectFiles();
         }
 
         async void CollectFiles()
@@ -50,8 +50,7 @@ namespace ProjectManager
             }
 
             projectList.Clear();
-            progress.Maximum = 100; // Set a default maximum for progress
-            progress.Value = 0;
+         
 
             cancellationTokenSource = new CancellationTokenSource();
 
@@ -108,10 +107,10 @@ namespace ProjectManager
                         color = color
                     });
 
-                  
+
                     Dispatcher.Invoke(() =>
                     {
-                        progress.Value = (double)projectList.Count / (progress.Maximum == 0 ? 1 : progress.Maximum) * 100;
+                      
                         status.Text = $"Сканируется: {slnFile}";
                     });
 
@@ -129,7 +128,7 @@ namespace ProjectManager
 
                 MessageBox.Show($"Доступ запрещён {directory}: {uae.Message}");
             }
-          
+
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка при выполнении: {directory}: {ex.Message}");
@@ -150,7 +149,7 @@ namespace ProjectManager
             {
                 cancellationTokenSource.Cancel();
                 projectList.Clear();
-                progress.Value = 0;
+              
                 status.Text = "Сканирование остановлено.";
             }
         }
@@ -171,19 +170,19 @@ namespace ProjectManager
 
             if (string.IsNullOrEmpty(searchText))
             {
-                
+
                 ProjectList.ItemsSource = projectList;
             }
             else
             {
-                
+
                 var filteredProjects = projectList.Where(project =>
                     project.Path.ToLower().Contains(searchText) ||
                     project.ProjectType.ToLower().Contains(searchText) ||
                     project.Creation_Time.ToLower().Contains(searchText)
                 ).ToList();
 
-               
+
                 ProjectList.ItemsSource = filteredProjects;
             }
         }
