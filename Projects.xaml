@@ -48,7 +48,7 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <TextBlock TextWrapping="Wrap" x:Name="status" Grid.Column="9" Grid.ColumnSpan="5" Margin="57,0,15,4" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBlock Foreground="White" TextWrapping="Wrap" x:Name="status" Grid.Column="2" Grid.ColumnSpan="5" Margin="57,4,15,0" Grid.Row="1" Grid.RowSpan="2"/>
         <TextBlock FontSize="48" Grid.ColumnSpan="7" Foreground="White" Grid.RowSpan="2" FontFamily="Candara" Margin="0,0,0,47"><Run Text="Ваши проекты"/></TextBlock>
         <TextBox x:Name="Search" TextChanged="searching" VerticalAlignment="Center"  Grid.ColumnSpan="5" Margin="10" Grid.Row="2" Height="22" Grid.Column="9" >
 
@@ -126,7 +126,7 @@
 
             </Image>
         </Button>
-        <TextBlock TextWrapping="Wrap" Grid.ColumnSpan="4" Grid.Row="1" Margin="57,34,21,38" Grid.RowSpan="2" Foreground="White" FontFamily="Candara" FontSize="16" Grid.Column="9"><Run Text="Поиск"/></TextBlock>
+        <TextBlock TextWrapping="Wrap" Grid.ColumnSpan="3" Grid.Row="1" Margin="10,34,11,38" Grid.RowSpan="2" Foreground="White" FontFamily="Candara" FontSize="16" Grid.Column="9"><Run Text="Поиск"/></TextBlock>
     </Grid>
 
 </Page>

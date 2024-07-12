@@ -122,6 +122,71 @@ namespace ProjectManager
                         projectType = "Java";
                         color = Brushes.Orange;
                     }
+                    else if (Directory.GetFiles(directory, "*.js").Length > 0)
+                    {
+                        projectType = "JavaScript";
+                        color = Brushes.Yellow;
+                    }
+
+                    else if (Directory.GetFiles(directory, "*.rb").Length > 0)
+                    {
+                        projectType = "Ruby";
+                        color = Brushes.Crimson;
+                    }
+                    else if (Directory.GetFiles(directory, "*.go").Length > 0)
+                    {
+                        projectType = "Go";
+                        color = Brushes.SkyBlue;
+                    }
+                    else if (Directory.GetFiles(directory, "*.rs").Length > 0)
+                    {
+                        projectType = "Rust";
+                        color = Brushes.DarkOrange;
+                    }
+
+                    else if (Directory.GetFiles(directory, "*.asm").Length > 0)
+                    {
+                        projectType = "Assembly";
+                        color = Brushes.Maroon;
+                    }
+                    else if (Directory.GetFiles(directory, "*.vb").Length > 0)
+                    {
+                        projectType = "Visual Basic";
+                        color = Brushes.DarkRed;
+                    }
+                    else if (Directory.GetFiles(directory, "*.html").Length > 0 || Directory.GetFiles(directory, "*.htm").Length > 0)
+                    {
+                        projectType = "HTML";
+                        color = Brushes.OrangeRed;
+                    }
+                    else if (Directory.GetFiles(directory, "*.css").Length > 0)
+                    {
+                        projectType = "CSS";
+                        color = Brushes.LightSkyBlue;
+                    }
+                    else if (Directory.GetFiles(directory, "*.md").Length > 0)
+                    {
+                        projectType = "Markdown";
+                        color = Brushes.LightGray;
+                    }
+                    else if (Directory.GetFiles(directory, "*.vb").Length > 0)
+                    {
+                        projectType = "Visual Basic";
+                        color = Brushes.DarkRed;
+                    }
+                    else if (Directory.GetFiles(directory, "*.fs").Length > 0)
+                    {
+                        projectType = "F#";
+                        color = Brushes.DarkMagenta;
+                    }
+                    else if (Directory.GetFiles(directory, "*.dll").Length > 0 ||
+                        Directory.GetFiles(directory, "*.so").Length > 0 ||
+                        Directory.GetFiles(directory, "*.a").Length > 0 ||
+                        Directory.GetFiles(directory, "*.lib").Length > 0)
+                    {
+                        projectType = "Библиотека";
+                        color = Brushes.Blue;
+                    }
 
                     projectList.Add(new ProjectInfo
                     {
