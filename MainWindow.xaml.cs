@@ -35,5 +35,10 @@ namespace ProjectManager
         {
             frame.Navigate(new MainPage());
         }
+
+        private void Statistic(object sender, RoutedEventArgs e)
+        {
+           // frame.Navigate( new );
+        }
     }
 }

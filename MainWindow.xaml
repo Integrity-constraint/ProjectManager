@@ -84,7 +84,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Margin="0,0,-50,0" ToolTip="В РАЗРАБОТКЕ" Background="White">
+            <Button Click="Statistic" Margin="0,0,-50,0" ToolTip="В РАЗРАБОТКЕ" Background="White">
                 <TextBlock FontSize="18"  >
      Статистика
                 </TextBlock>
